@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Star Classification</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f5f5f5;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+      }
+
+      .form-container {
+        background-color: #ffffff;
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        width: 100%;
+        max-width: 400px;
+      }
+
+      h1 {
+        text-align: center;
+        margin-bottom: 20px;
+        color: #333;
+      }
+
+      label {
+        display: block;
+        margin-top: 10px;
+        margin-bottom: 5px;
+        color: #444;
+      }
+
+      input[type="text"] {
+        width: 100%;
+        padding: 8px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+      }
+
+      input[type="submit"] {
+        width: 100%;
+        padding: 10px;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+
+      input[type="submit"]:hover {
+        background-color: #0056b3;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="form-container">
+      <h1>Star Classification<br />Using Astronomy Dataset</h1>
+      <form action="/predict" method="post">
+        <label for="u">u:</label>
+        <input type="text" name="u" id="u" required />
+
+        <label for="g">g:</label>
+        <input type="text" name="g" id="g" required />
+
+        <label for="r">r:</label>
+        <input type="text" name="r" id="r" required />
+
+        <label for="i">i:</label>
+        <input type="text" name="i" id="i" required />
+
+        <label for="z">z:</label>
+        <input type="text" name="z" id="z" required />
+
+        <label for="redshift">Redshift:</label>
+        <input type="text" name="redshift" id="redshift" required />
+
+        <input type="submit" value="Predict" />
+      </form>
+    </div>
+  </body>
+</html>
